@@ -1,0 +1,19 @@
+{
+  "id": "dsh-export-center",
+  "name": "Download Center",
+  "type": "bundle",
+  "package": "dsh-export-center",
+  "repo": "zhoufu-exp/DSH-plugins",
+  "spec": "dsh-export-center@1.0.0",
+  "version": "1.0.0",
+  "description": "左侧栏「下载中心」+ 右侧文件预览下载按钮，记录本次页面内保存过的文件，可随时重新下载。",
+  "longDescription": "在左侧边栏加入「下载中心」面板，并在右侧文件预览标题栏加入下载按钮。\n\n- 点击预览标题栏的下载图标即可把当前文件保存到本地；\n- 下载中心按时间倒序列出本次页面内保存过的文件（最多 40 条），支持重新下载与清空；\n- 成功/失败都有浮层提示，失败会区分超出大小上限、文件不存在、不是普通文件等原因；\n- 中英文文案跟随 DSH 语言偏好。\n\n记录仅保存在页面内存中，刷新页面后清空。",
+  "tags": ["ui", "download", "sidebar", "files"],
+  "category": "ui",
+  "license": "MIT",
+  "author": {
+    "name": "zhoufu-exp",
+    "url": "https://github.com/zhoufu-exp"
+  },
+  "source": "curated"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "dsh-workspace-editor",
+  "name": "Workspace Text Editor",
+  "type": "bundle",
+  "package": "dsh-workspace-editor",
+  "repo": "zhoufu-exp/DSH-plugins",
+  "spec": "dsh-workspace-editor@1.0.0",
+  "version": "1.0.0",
+  "description": "在右侧栏文件浏览器中直接编辑 UTF-8 文本文件：版本校验保存、外部改动提示、本地草稿。",
+  "longDescription": "在右侧栏文件浏览器中直接编辑 UTF-8 文本文件。\n\n- 预览标题栏「编辑」按钮进入编辑器页签，刷新页面后可恢复；\n- 保存时携带文件版本，文件被其他程序改过会提示冲突，可重新加载或显式覆盖；\n- 编辑期间外部变更会提示，未保存内容按 500ms 防抖写入 localStorage，恢复草稿时可一键丢弃；\n- 只读会话禁止编辑，`workspace-write` 下只能保存到会话工作区内；\n- 超过 2 MiB、非 UTF-8、二进制、文件不存在等情况都有对应提示；\n- 中英文文案跟随 DSH 语言偏好。",
+  "tags": ["ui", "editor", "files", "sidebar"],
+  "category": "ui",
+  "license": "MIT",
+  "author": {
+    "name": "zhoufu-exp",
+    "url": "https://github.com/zhoufu-exp"
+  },
+  "source": "curated"
+}
