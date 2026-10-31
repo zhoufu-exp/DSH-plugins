@@ -1,5 +1,5 @@
 {
-  "name": "dsh-download-center",
+  "name": "dsh-export-center",
   "version": "1.0.0",
   "type": "module",
   "description": "Sidebar download center with a download button in the right-sidebar file preview.",

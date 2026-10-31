@@ -19,10 +19,10 @@ DeepSeek Harness（DSH）插件集合。每个子目录是一个独立、可单�
 
 - DSH `0.2.1-rc.2` 或更高版本；
 - `pnpm` 在 PATH 中（DSH 通过 pnpm 安装插件；缺失时会报 `spawn pnpm ENOENT`）；
-- 两个插件都已发布到 npm：`dsh-download-center`、`dsh-workspace-editor`。
+- 两个插件都已发布到 npm：`dsh-export-center`、`dsh-workspace-editor`。
 
 ```bash
-dsh plugin --profile web add dsh-download-center
+dsh plugin --profile web add dsh-export-center
 dsh plugin --profile web add dsh-workspace-editor
 ```
 
@@ -33,7 +33,7 @@ dsh plugin --profile web add dsh-workspace-editor
 卸载：
 
 ```bash
-dsh plugin --profile web remove dsh-download-center
+dsh plugin --profile web remove dsh-export-center
 dsh plugin --profile web remove dsh-workspace-editor
 ```
 
@@ -98,10 +98,10 @@ Requirements:
 
 - DSH `0.2.1-rc.2` or newer;
 - `pnpm` on `PATH` (DSH installs plugins through pnpm; without it you get `spawn pnpm ENOENT`);
-- Both plugins are published on npm as `dsh-download-center` and `dsh-workspace-editor`.
+- Both plugins are published on npm as `dsh-export-center` and `dsh-workspace-editor`.
 
 ```bash
-dsh plugin --profile web add dsh-download-center
+dsh plugin --profile web add dsh-export-center
 dsh plugin --profile web add dsh-workspace-editor
 ```
 
@@ -112,7 +112,7 @@ Install one or both as needed. Restart DSH afterwards: the Web client builds its
 Uninstall:
 
 ```bash
-dsh plugin --profile web remove dsh-download-center
+dsh plugin --profile web remove dsh-export-center
 dsh plugin --profile web remove dsh-workspace-editor
 ```
 

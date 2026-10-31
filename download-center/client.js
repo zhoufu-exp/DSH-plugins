@@ -1,5 +1,5 @@
 window.__ModuleLoader__.load({
-  id: 'dsh-download-center',
+  id: 'dsh-export-center',
   factory(require) {
     const React = require('react');
     const h = React.createElement;
