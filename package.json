@@ -1,0 +1,16 @@
+{
+  "name": "dsh-plugins",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "DeepSeek Harness (DSH) web plugins collected in one repository.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhoufu-exp/DSH-plugins.git"
+  },
+  "workspaces": [
+    "download-center",
+    "workspace-editor"
+  ]
+}

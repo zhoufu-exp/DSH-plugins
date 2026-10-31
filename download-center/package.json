@@ -4,6 +4,19 @@
   "private": true,
   "type": "module",
   "description": "Sidebar download center with a download button in the right-sidebar file preview.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhoufu-exp/DSH-plugins.git",
+    "directory": "download-center"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "download",
+    "sidebar"
+  ],
   "exports": {
     ".": "./index.js",
     "./client": "./client.js",
@@ -20,6 +33,18 @@
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
+    },
+    "catalog": {
+      "category": "ui",
+      "summary": {
+        "en": "Adds a Download Center panel to the left sidebar and a download button to the right-sidebar file preview, with an in-page history of the files you saved.",
+        "zh": "在左侧栏加入「下载中心」面板，并为右侧文件预览加上下载按钮，记录本次页面内保存过的文件。"
+      },
+      "capabilities": [
+        "slots",
+        "locale",
+        "workspace-files"
+      ]
     },
     "client": {
       "platform": "web",

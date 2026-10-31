@@ -4,6 +4,19 @@
   "private": true,
   "type": "module",
   "description": "Edit UTF-8 text files in the right-sidebar file browser.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhoufu-exp/DSH-plugins.git",
+    "directory": "workspace-editor"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "editor",
+    "sidebar"
+  ],
   "exports": {
     ".": "./index.js",
     "./client": "./client.js",
@@ -20,6 +33,20 @@
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
+    },
+    "catalog": {
+      "category": "ui",
+      "summary": {
+        "en": "Edits UTF-8 text files in the right-sidebar file browser, with version-checked saves, external-change prompts and local drafts.",
+        "zh": "在右侧栏文件浏览器中直接编辑 UTF-8 文本文件，保存带版本校验，外部改动会提示，未保存内容保留为本地草稿。"
+      },
+      "capabilities": [
+        "slots",
+        "locale",
+        "workspace-files",
+        "file-write",
+        "drafts"
+      ]
     },
     "client": {
       "platform": "web",
