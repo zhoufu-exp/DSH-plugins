@@ -20,8 +20,7 @@ DSH Web 插件：在右侧栏文件浏览器中直接编辑 UTF-8 文本文件�
 前置条件：DSH `0.2.1-rc.5` 上验证通过，`pnpm` 在 PATH 中。
 
 ```bash
-git clone https://github.com/zhoufu-exp/DSH-plugins.git
-dsh plugin --profile web add ./DSH-plugins/workspace-editor
+dsh plugin --profile web add dsh-workspace-editor
 ```
 
 安装后需要**重启 DSH**（`dsh web`）再刷新页面：Web 客户端的插件清单在启动时生成。
@@ -29,7 +28,7 @@ dsh plugin --profile web add ./DSH-plugins/workspace-editor
 卸载：
 
 ```bash
-dsh plugin --profile web remove @local/dsh-workspace-editor
+dsh plugin --profile web remove dsh-workspace-editor
 ```
 
 ## 使用
@@ -91,14 +90,13 @@ Features:
 Install (DSH `0.2.1-rc.5` verified, `pnpm` on `PATH`):
 
 ```bash
-git clone https://github.com/zhoufu-exp/DSH-plugins.git
-dsh plugin --profile web add ./DSH-plugins/workspace-editor
+dsh plugin --profile web add dsh-workspace-editor
 ```
 
 Restart DSH and reload the page. Uninstall with:
 
 ```bash
-dsh plugin --profile web remove @local/dsh-workspace-editor
+dsh plugin --profile web remove dsh-workspace-editor
 ```
 
 Limitations: plain text only (no highlighting, in-file search, or line numbers), 2 MiB / UTF-8 only, CRLF may be normalized to LF, no create/rename/delete, UI edits are not written to the session log, and read-only sessions cannot save.

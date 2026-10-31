@@ -1,7 +1,6 @@
 {
-  "name": "@local/dsh-workspace-editor",
+  "name": "dsh-workspace-editor",
   "version": "1.0.0",
-  "private": true,
   "type": "module",
   "description": "Edit UTF-8 text files in the right-sidebar file browser.",
   "license": "MIT",

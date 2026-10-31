@@ -1,5 +1,5 @@
 window.__ModuleLoader__.load({
-  id: '@local/dsh-workspace-editor',
+  id: 'dsh-workspace-editor',
   factory(require) {
     const React = require('react');
     const h = React.createElement;
@@ -7,7 +7,7 @@ window.__ModuleLoader__.load({
     /** Locale namespace owned by this plugin. */
     const NS = 'workspaceEditor';
     /** This implementation's identity in the tab system, and the key its body and title register under. */
-    const EDITOR_ID = '@local/dsh-workspace-editor';
+    const EDITOR_ID = 'dsh-workspace-editor';
     /** The page kind opened explicitly from the preview header. */
     const EDITOR_KIND = 'workspace-editor';
     /** Read/save ceiling; the Host enforces the same text ceiling on the wire. */

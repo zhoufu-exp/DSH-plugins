@@ -19,24 +19,25 @@ DeepSeek Harness（DSH）插件集合。每个子目录是一个独立、可单�
 
 - DSH `0.2.1-rc.2` 或更高版本；
 - `pnpm` 在 PATH 中（DSH 通过 pnpm 安装插件；缺失时会报 `spawn pnpm ENOENT`）；
-- 将本仓库克隆到本地任意目录（插件以本地目录形式安装）。
+- 两个插件都已发布到 npm：`dsh-download-center`、`dsh-workspace-editor`。
 
 ```bash
-git clone https://github.com/zhoufu-exp/DSH-plugins.git
-dsh plugin --profile web add ./DSH-plugins/download-center
-dsh plugin --profile web add ./DSH-plugins/workspace-editor
+dsh plugin --profile web add dsh-download-center
+dsh plugin --profile web add dsh-workspace-editor
 ```
+
+开发或改动插件时，也可以克隆仓库后从目录安装：`dsh plugin --profile web add ./DSH-plugins/download-center`。
 
 按需安装其中一个或两个；安装完成后需要**重启 DSH**（`dsh web`）才能加载新插件：Web 客户端在启动时生成插件清单，新插件不会热插入。重启后刷新页面即可看到对应入口。
 
 卸载：
 
 ```bash
-dsh plugin --profile web remove @local/download-center
-dsh plugin --profile web remove @local/dsh-workspace-editor
+dsh plugin --profile web remove dsh-download-center
+dsh plugin --profile web remove dsh-workspace-editor
 ```
 
-升级：`git pull` 后重新执行对应的 `dsh plugin --profile web add ...`，再重启 DSH。
+升级：`dsh plugin --profile web add <包名>@latest`，再重启 DSH。
 
 ### 目录结构
 
@@ -97,24 +98,25 @@ Requirements:
 
 - DSH `0.2.1-rc.2` or newer;
 - `pnpm` on `PATH` (DSH installs plugins through pnpm; without it you get `spawn pnpm ENOENT`);
-- This repository cloned somewhere locally (plugins are installed from a local directory).
+- Both plugins are published on npm as `dsh-download-center` and `dsh-workspace-editor`.
 
 ```bash
-git clone https://github.com/zhoufu-exp/DSH-plugins.git
-dsh plugin --profile web add ./DSH-plugins/download-center
-dsh plugin --profile web add ./DSH-plugins/workspace-editor
+dsh plugin --profile web add dsh-download-center
+dsh plugin --profile web add dsh-workspace-editor
 ```
+
+To develop against a checkout, clone the repository and install from the directory instead: `dsh plugin --profile web add ./DSH-plugins/download-center`.
 
 Install one or both as needed. Restart DSH afterwards: the Web client builds its plugin manifest at startup, so a freshly installed bundle is not hot-inserted. Reload the page after the restart.
 
 Uninstall:
 
 ```bash
-dsh plugin --profile web remove @local/download-center
-dsh plugin --profile web remove @local/dsh-workspace-editor
+dsh plugin --profile web remove dsh-download-center
+dsh plugin --profile web remove dsh-workspace-editor
 ```
 
-To upgrade, run `git pull`, repeat the matching `dsh plugin --profile web add ...` command, and restart DSH.
+To upgrade, run `dsh plugin --profile web add <package>@latest` and restart DSH.
 
 ### Layout
 

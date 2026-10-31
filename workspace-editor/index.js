@@ -7,7 +7,7 @@
  * browser; this module owns the session sandbox policy, the regular-file checks,
  * the save conflict check, and the owner-only transport routes.
  *
- * @module @local/dsh-workspace-editor
+ * @module dsh-workspace-editor
  */
 
 /** Routes sit inside the `/api` bridge, so they inherit its trust and cookie checks. */

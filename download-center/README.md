@@ -17,8 +17,7 @@ DSH Web 插件：在左侧栏加入「下载中心」面板，并在右侧文件
 前置条件：DSH `0.2.1-rc.2` 或更高版本，`pnpm` 在 PATH 中。
 
 ```bash
-git clone https://github.com/zhoufu-exp/DSH-plugins.git
-dsh plugin --profile web add ./DSH-plugins/download-center
+dsh plugin --profile web add dsh-download-center
 ```
 
 安装后需要**重启 DSH**（`dsh web`）再刷新页面：Web 客户端的插件清单在启动时生成，新插件不会被热插入。
@@ -26,7 +25,7 @@ dsh plugin --profile web add ./DSH-plugins/download-center
 卸载：
 
 ```bash
-dsh plugin --profile web remove @local/download-center
+dsh plugin --profile web remove dsh-download-center
 ```
 
 ## 使用
@@ -68,11 +67,10 @@ A DSH Web plugin that adds a **Download Center** panel to the left sidebar and a
 Install (DSH `0.2.1-rc.2`+, `pnpm` on `PATH`):
 
 ```bash
-git clone https://github.com/zhoufu-exp/DSH-plugins.git
-dsh plugin --profile web add ./DSH-plugins/download-center
+dsh plugin --profile web add dsh-download-center
 ```
 
-Restart DSH, then reload the page. Uninstall with `dsh plugin --profile web remove @local/download-center`.
+Restart DSH, then reload the page. Uninstall with `dsh plugin --profile web remove dsh-download-center`.
 
 The history is page-lifetime only and is not persisted. File reads go through the session's workspace file service, so the host's byte limit applies.
 
