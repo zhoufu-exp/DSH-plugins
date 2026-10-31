@@ -1,0 +1,3 @@
+- insert:
+    - id: download-center
+      name: '@local/download-center'
