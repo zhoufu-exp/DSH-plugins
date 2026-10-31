@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Workspace Text Editor",
+    "description": "Edit UTF-8 text files directly from the right-sidebar file browser, with version-guarded saving and local drafts."
+  }
+}

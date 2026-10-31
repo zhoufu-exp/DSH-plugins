@@ -11,6 +11,7 @@ DeepSeek Harness（DSH）插件集合。每个子目录是一个独立、可单�
 | 插件 | 说明 | 平台 |
 | --- | --- | --- |
 | [download-center](./download-center/) | 左侧栏「下载中心」面板 + 右侧文件预览标题栏的下载按钮，并记录本次页面内保存过的文件 | Web |
+| [workspace-editor](./workspace-editor/) | 右侧栏文件浏览器中的文本编辑器：预览头部「编辑」按钮、带版本校验的保存、本地草稿 | Web |
 
 ### 安装
 
@@ -23,17 +24,19 @@ DeepSeek Harness（DSH）插件集合。每个子目录是一个独立、可单�
 ```bash
 git clone https://github.com/zhoufu-exp/DSH-plugins.git
 dsh plugin --profile web add ./DSH-plugins/download-center
+dsh plugin --profile web add ./DSH-plugins/workspace-editor
 ```
 
-安装完成后需要**重启 DSH**（`dsh web`）才能加载新插件：Web 客户端在启动时生成插件清单，新插件不会热插入。重启后刷新页面即可看到左侧边栏入口。
+按需安装其中一个或两个；安装完成后需要**重启 DSH**（`dsh web`）才能加载新插件：Web 客户端在启动时生成插件清单，新插件不会热插入。重启后刷新页面即可看到对应入口。
 
 卸载：
 
 ```bash
 dsh plugin --profile web remove @local/download-center
+dsh plugin --profile web remove @local/dsh-workspace-editor
 ```
 
-升级：`git pull` 后重新执行一次 `dsh plugin --profile web add ./DSH-plugins/download-center`，再重启 DSH。
+升级：`git pull` 后重新执行对应的 `dsh plugin --profile web add ...`，再重启 DSH。
 
 ### 目录结构
 
@@ -41,12 +44,23 @@ dsh plugin --profile web remove @local/download-center
 DSH-plugins/
 ├── LICENSE
 ├── README.md
-└── download-center/            # 一个完整的 DSH 插件包
-    ├── package.json            # dsh.bundle.patch / dsh.client 声明
-    ├── cordis.patch.yml        # 插件自带的配置层（insert 入口）
-    ├── index.js                # Host 半边
-    ├── client.js               # Client 半边（Web 平台）
+├── download-center/            # 一个完整的 DSH 插件包
+│   ├── package.json            # dsh.bundle.patch / dsh.client 声明
+│   ├── cordis.patch.yml        # 插件自带的配置层（insert 入口）
+│   ├── index.js                # Host 半边
+│   ├── client.js               # Client 半边（Web 平台）
+│   ├── icon.svg
+│   ├── README.md
+│   └── locale/
+│       ├── en.json
+│       └── zh.json
+└── workspace-editor/           # 另一个完整的 DSH 插件包
+    ├── package.json
+    ├── cordis.patch.yml
+    ├── index.js
+    ├── client.js
     ├── icon.svg
+    ├── README.md
     └── locale/
         ├── en.json
         └── zh.json
@@ -59,7 +73,7 @@ DSH-plugins/
 调试时可用：
 
 ```bash
-dsh --profile web --dump-config | grep -A2 download-center
+dsh --profile web --dump-config | grep -A2 -E 'download-center|workspace-editor'
 ```
 
 确认插件已进入合成后的配置树。
@@ -75,6 +89,7 @@ dsh --profile web --dump-config | grep -A2 download-center
 | Plugin | Description | Platform |
 | --- | --- | --- |
 | [download-center](./download-center/) | A Download Center panel in the left sidebar plus a download button in the right-sidebar file preview header, with an in-page history of saved files | Web |
+| [workspace-editor](./workspace-editor/) | A text editor inside the right-sidebar file browser: an Edit button in the preview header, version-guarded saving, and local drafts | Web |
 
 ### Install
 
@@ -87,15 +102,19 @@ Requirements:
 ```bash
 git clone https://github.com/zhoufu-exp/DSH-plugins.git
 dsh plugin --profile web add ./DSH-plugins/download-center
+dsh plugin --profile web add ./DSH-plugins/workspace-editor
 ```
 
-Restart DSH afterwards: the Web client builds its plugin manifest at startup, so a freshly installed bundle is not hot-inserted. Reload the page after the restart.
+Install one or both as needed. Restart DSH afterwards: the Web client builds its plugin manifest at startup, so a freshly installed bundle is not hot-inserted. Reload the page after the restart.
 
 Uninstall:
 
 ```bash
 dsh plugin --profile web remove @local/download-center
+dsh plugin --profile web remove @local/dsh-workspace-editor
 ```
+
+To upgrade, run `git pull`, repeat the matching `dsh plugin --profile web add ...` command, and restart DSH.
 
 ### Layout
 

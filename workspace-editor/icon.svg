@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Workspace Text Editor">
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#2f6fed"/>
+  <path d="M18 14h17l7 7v15.5" fill="none" stroke="#ffffff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M35 14v7h7" fill="none" stroke="#ffffff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18 14v30h10" fill="none" stroke="#ffffff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24 26h11M24 32h8" fill="none" stroke="#cfe0ff" stroke-width="3" stroke-linecap="round"/>
+  <path d="M45.6 30.2l5.2 5.2-12.7 12.7-6.6 1.4 1.4-6.6z" fill="#ffffff" stroke="#1d4fb4" stroke-width="2.2" stroke-linejoin="round"/>
+</svg>
